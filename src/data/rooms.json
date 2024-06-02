@@ -1,0 +1,258 @@
+[
+    {
+        "id": "101",
+        "roomType": "Deluxe",
+        "bedType": "King",
+        "capacity": 2,
+        "pricePerNight": 150,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV",
+            "Mini Bar"
+        ]
+    },
+    {
+        "id": "102",
+        "roomType": "Standard",
+        "bedType": "Queen",
+        "capacity": 2,
+        "pricePerNight": 100,
+        "amenitiess": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV"
+        ]
+    },
+    {
+        "id": "103",
+        "roomType": "Suite",
+        "bedType": "King",
+        "capacity": 4,
+        "pricePerNight": 300,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV",
+            "Mini Bar",
+            "Living Area"
+        ]
+    },
+    {
+        "id": "104",
+        "roomType": "Single",
+        "bedType": "Single",
+        "capacity": 1,
+        "pricePerNight": 80,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV"
+        ]
+    },
+    {
+        "id": "105",
+        "roomType": "Double",
+        "bedType": "Double",
+        "capacity": 2,
+        "pricePerNight": 120,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV",
+            "Mini Bar"
+        ]
+    },
+    {
+        "id": "106",
+        "roomType": "Deluxe",
+        "bedType": "King",
+        "capacity": 2,
+        "pricePerNight": 150,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV",
+            "Mini Bar"
+        ]
+    },
+    {
+        "id": "107",
+        "roomType": "Standard",
+        "bedType": "Queen",
+        "capacity": 2,
+        "pricePerNight": 100,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV"
+        ]
+    },
+    {
+        "id": "108",
+        "roomType": "Suite",
+        "bedType": "King",
+        "capacity": 4,
+        "pricePerNight": 300,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV",
+            "Mini Bar",
+            "Living Area"
+        ]
+    },
+    {
+        "id": "109",
+        "roomType": "Single",
+        "bedType": "Single",
+        "capacity": 1,
+        "pricePerNight": 80,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV"
+        ]
+    },
+    {
+        "id": "110",
+        "roomType": "Double",
+        "bedType": "Double",
+        "capacity": 2,
+        "pricePerNight": 120,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV",
+            "Mini Bar"
+        ]
+    },
+    {
+        "id": "111",
+        "roomType": "Deluxe",
+        "bedType": "King",
+        "capacity": 2,
+        "pricePerNight": 150,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV",
+            "Mini Bar"
+        ]
+    },
+    {
+        "id": "112",
+        "roomType": "Standard",
+        "bedType": "Queen",
+        "capacity": 2,
+        "pricePerNight": 100,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV"
+        ]
+    },
+    {
+        "id": "113",
+        "roomType": "Suite",
+        "bedType": "King",
+        "capacity": 4,
+        "pricePerNight": 300,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV",
+            "Mini Bar",
+            "Living Area"
+        ]
+    },
+    {
+        "id": "114",
+        "roomType": "Single",
+        "bedType": "Single",
+        "capacity": 1,
+        "pricePerNight": 80,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV"
+        ]
+    },
+    {
+        "id": "115",
+        "roomType": "Double",
+        "bedType": "Double",
+        "capacity": 2,
+        "pricePerNight": 120,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV",
+            "Mini Bar"
+        ]
+    },
+    {
+        "id": "116",
+        "roomType": "Deluxe",
+        "bedType": "King",
+        "capacity": 2,
+        "pricePerNight": 150,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV",
+            "Mini Bar"
+        ]
+    },
+    {
+        "id": "117",
+        "roomType": "Standard",
+        "bedType": "Queen",
+        "capacity": 2,
+        "pricePerNight": 100,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV"
+        ]
+    },
+    {
+        "id": "118",
+        "roomType": "Suite",
+        "bedType": "King",
+        "capacity": 4,
+        "pricePerNight": 300,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV",
+            "Mini Bar",
+            "Living Area"
+        ]
+    },
+    {
+        "id": "119",
+        "roomType": "Single",
+        "bedType": "Single",
+        "capacity": 1,
+        "pricePerNight": 80,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV"
+        ]
+    },
+    {
+        "id": "120",
+        "roomType": "Double",
+        "bedType": "Double",
+        "capacity": 2,
+        "pricePerNight": 120,
+        "amenities": [
+            "Wi-Fi",
+            "Air Conditioning",
+            "TV",
+            "Mini Bar"
+        ]
+    }
+]
