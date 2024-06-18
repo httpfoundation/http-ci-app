@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch src --exec ts-node src/app.ts",
+    "start-build": "node dist/app.js",
     "gen": "ts-node src/tools/generateBookings.ts",
     "show": "ts-node src/tools/showCalendar.ts",
     "build": "tsc"
