@@ -11,7 +11,7 @@ COPY . .
 
 RUN npm run build
 
-COPY src/data/* /usr/src/app/dist
+RUN mkdir -p /usr/src/app/dist/data && cp -r ./src/data/* /usr/src/app/dist/data/
 
 EXPOSE 3000
 

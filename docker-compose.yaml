@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  hh-hotel-backend:
+    image: ghcr.io/skillsit-hu/ws2024-s17-kr-training-module-f-backend/hh-hotel-backend:latest
+    restart: always
+    ports:
+      - "8300:3000"
+      
