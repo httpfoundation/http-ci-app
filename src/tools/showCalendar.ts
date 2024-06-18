@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-// import fetch from "node-fetch";
 import { Room, Rooms, Booking, RoomType, Bookings, GuestName } from "../types";
 
 export async function showCalendar() {
@@ -37,28 +36,88 @@ export async function showCalendar() {
     const roomCalendar = getRoomCalendar(room.id, bookings);
 
     if (roomCalendar) {
-      const bookingMap = roomCalendar.reduce((acc, bookingId, index) => {
+      const bookingMapUp = roomCalendar[0].reduce((acc, bookingId, index) => {
         return `${acc}${bookingId} `;
       }, "");
-      console.log(`${room.id}  ${room.roomType.padEnd(9, " ")}  ${bookingMap}`);
+      const bookingMapDown = roomCalendar[1].reduce((acc, bookingId, index) => {
+        return `${acc}${bookingId} `;
+      }, "");
+      console.log(
+        `${room.id}  ${room.roomType.padEnd(9, " ")}  ${bookingMapUp}`
+      );
+      console.log(`${"".padEnd(14, " ")}  ${bookingMapDown}`);
     }
   });
+  // cleanRoomAssignmentsSinceADate(bookings, "2024-06-21");
+  showUnassignedBookings(bookings);
 }
 
 function getRoomCalendar(roomId: string, bookings: Bookings) {
-  const roomCalendar = new Array(30).fill("----");
+  const roomCalendar = [new Array(30).fill("----"), new Array(30).fill("----")];
   const bookingsByRoomId = bookings.filter((b) => b.roomId === roomId);
 
   bookingsByRoomId.forEach((booking) => {
     const checkInDate = new Date(booking.checkInDate);
     const checkOutDate = new Date(booking.checkOutDate);
     for (let d = checkInDate; d <= checkOutDate; d.setDate(d.getDate() + 1)) {
-      roomCalendar[d.getDate() - 1] = booking.id;
+      const index = roomCalendar[0][d.getDate() - 1] === "----" ? 0 : 1;
+      roomCalendar[index][d.getDate() - 1] = booking.id;
     }
   });
 
   return roomCalendar;
 }
 
-// Run the script
+function showUnassignedBookings(
+  bookings: Booking[],
+  roomType: RoomType = RoomType.Deluxe
+) {
+  const unassigned = bookings.filter(
+    (booking) => booking.roomId === "" && booking.roomType === roomType
+  );
+  console.log("Unassigned bookings for room type " + roomType + ":");
+  unassigned.forEach((booking) => {
+    console.log(
+      `${booking.id} - ${booking.guestName.padEnd(20, " ")} - ${
+        booking.checkInDate
+      } - ${booking.checkOutDate} - ${booking.numberOfGuests}`
+    );
+  });
+}
+
+function cleanRoomAssignmentsSinceADate(bookings: Booking[], date: String) {
+  const unassigned = bookings.filter((booking) => booking.checkInDate >= date);
+
+  unassigned.forEach((booking) => {
+    // remove roomId from booking
+    booking.roomId = "";
+  });
+  // const extendedBookings = extendBookingsByOneDay(bookings);
+  showUnassignedBookings(bookings);
+
+  // write to file
+  fs.writeFileSync(
+    path.join(__dirname, "../data/bookings-unassignments.json"),
+    JSON.stringify(bookings)
+  );
+}
+
+function extendBookingsByOneDay(bookings: Booking[]) {
+  const extendedBookings = [...bookings];
+  extendedBookings.forEach((booking) => {
+    if (booking.checkOutDate === "2024-06-30") return;
+    const checkOutDate = new Date(booking.checkOutDate);
+    checkOutDate.setDate(checkOutDate.getDate() + 1);
+    booking.checkOutDate = checkOutDate.toISOString().split("T")[0];
+  });
+
+  // write to file
+  fs.writeFileSync(
+    path.join(__dirname, "../data/bookings-extended.json"),
+    JSON.stringify(extendedBookings)
+  );
+
+  return extendedBookings;
+}
+
 showCalendar();
