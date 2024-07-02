@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch src --exec ts-node src/app.ts",
-    "start-build": "node dist/app.js",
-    "gen": "ts-node src/tools/generateBookings.ts",
-    "show": "ts-node src/tools/showCalendar.ts",
-    "build": "rimraf dist && tsc"
+    "start": "nodemon src/app.ts",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -28,10 +28,5 @@
     "axios": "^1.7.2",
     "cors": "^2.8.5",
     "express": "^4.19.2"
-  },
-  "pre-commit": [
-    "ts.check",
-    "build",
-    "add-build"
-  ]
+  }
 }
