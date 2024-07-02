@@ -2,7 +2,7 @@
   "name": "ws2024-s17-kr-training-module-f-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon src/app.ts",
     "build": "rimraf dist && tsc",
