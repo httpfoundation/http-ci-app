@@ -2,12 +2,15 @@ import express from "express";
 import cors from "cors";
 import roomsRouter from "./routes/rooms";
 import bookingRouter from "./routes/bookings";
+import statusRouter from "./routes/status";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+// status endpoint
+app.use("/api/v1/status", statusRouter);
 // rooms endpoint
 app.use("/api/v1/rooms", roomsRouter);
 // bookings endpoint
