@@ -7,11 +7,11 @@ const express_1 = require("express");
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const router = (0, express_1.Router)();
-router.get('/', (req, res) => {
-    const filePath = path_1.default.join(__dirname, '../data/rooms.json');
-    fs_1.default.readFile(filePath, 'utf8', (err, data) => {
+router.get("/", (req, res) => {
+    const filePath = path_1.default.join(__dirname, "../data/rooms.json");
+    fs_1.default.readFile(filePath, "utf8", (err, data) => {
         if (err) {
-            res.status(500).json({ message: 'Error reading rooms data file' });
+            res.status(500).json({ message: "Error reading rooms data file" });
         }
         else {
             const rooms = JSON.parse(data);

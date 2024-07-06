@@ -7,10 +7,13 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const rooms_1 = __importDefault(require("./routes/rooms"));
 const bookings_1 = __importDefault(require("./routes/bookings"));
+const status_1 = __importDefault(require("./routes/status"));
 const app = (0, express_1.default)();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
+// status endpoint
+app.use("/api/v1/status", status_1.default);
 // rooms endpoint
 app.use("/api/v1/rooms", rooms_1.default);
 // bookings endpoint

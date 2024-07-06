@@ -9,6 +9,7 @@ const path_1 = __importDefault(require("path"));
 const router = (0, express_1.Router)();
 router.get("/", (req, res) => {
     const filePath = path_1.default.join(__dirname, "../data/bookings.json");
+    console.log({ filePath });
     fs_1.default.readFile(filePath, "utf8", (err, data) => {
         if (err) {
             res.status(500).json({ message: "Error reading rooms data file" });
