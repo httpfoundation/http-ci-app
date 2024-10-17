@@ -1,36 +1,18 @@
-export enum RoomType {
-  Deluxe = "Deluxe",
-  Standard = "Standard",
-  Suite = "Suite",
-  Single = "Single",
-  Double = "Double",
+export enum SiteType {
+  React = "react",
+  Nodejs = "nodejs",
+  Nexjs = "nextj",
+  Other = "other",
 }
 
-export interface Room {
+export interface Site {
   id: string;
-  roomType: RoomType;
-  bedType: string;
-  capacity: number;
-  pricePerNight: number;
-  amenities: string[];
+  siteType: SiteType;
+  name: string;
+  publicUrl: string;
+  port: number;
+  path: string;
+  token: string;
 }
 
-export type Rooms = Room[];
-
-export interface Booking {
-  id: string;
-  guestName: string;
-  checkInDate: string; // Using ISO 8601 date format: YYYY-MM-DD
-  checkOutDate: string;
-  roomType: RoomType;
-  roomId: string; // Add this line
-  numberOfGuests: number;
-  specialRequests?: string;
-}
-
-export type Bookings = Booking[];
-
-export interface GuestName {
-  first_name: string;
-  last_name: string;
-}
+export type Sites = Site[];

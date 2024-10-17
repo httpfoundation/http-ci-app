@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "siteType": "React",
+    "name": "Test Site",
+    "publicUrl": "http://localhost:5000",
+    "port": 3000,
+    "path": "./test",
+    "token": "test-token"
+  },
+  {
+    "id": "2",
+    "siteType": "React",
+    "name": "Test Site 2",
+    "publicUrl": "http://localhost:5001",
+    "port": 3001,
+    "path": "test2",
+    "token": "test-token2"
+  }
+]
